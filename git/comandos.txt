@@ -1,0 +1,160 @@
+//ver version de git
+git --version 
+//sirve para que todas las configuraciones que vamos a realizar
+se haga de manera global y no por proyecto
+//configurar nombre
+git config --global user.name "Andres Porras"
+
+//configurar correo
+git config --global user.email ajporras0412@gmail.com
+
+//decrile que visual es nuestro editor de codigo
+
+git config --global core.editor "code --wait"
+
+//abir el archivo de configuracion desde visual
+git config --global -e
+
+//configurar los caracteres especiales en windows
+
+git config --global core.autocrlf true
+
+//configurar los caracteres especiales en linux/mac
+
+git config --global core.autocrlf input
+
+//ayuda de git
+git config -h
+
+###################### COMANDOS ##########################
+
+ls // listar
+pwd // saber directorio actual
+cd // moverse entre las carpetas
+cd .. // retroceder un directorio
+mkdir // crear directorio
+
+*********************************************************
+//en la ruta del directorio que vamos a trabajar con git
+git init
+// se crea la carpeta oculta .git
+
+*********************************************************
+
+///COMPUTADOR
+Los archivos de desarrollo
+//STOGE
+los archivos que van cambiando en codigo
+
+//COMMIT
+cuando ya estamos seguros de los archivos que cambiaron hacemos el commit
+
+//SERVER
+los cambio que comprometimos subirlos a la nube como github
+
+code. //abrir directorio en visual
+
+*********************************************************
+
+git status //ver el estado actual de nuestro repositorio
+git add archivo1.txt
+git add *.txt
+gid add . //mala practica
+*********************************************************
+
+git status
+
+// estos son los archivos que son seguidos por git
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   archivo1.txt
+// estos son los archivos que aun no son seguidos por git
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        archivo2.txt
+
+git add archivo2.txt
+*********************************************************
+
+si yo modifico uno de los archivos que ya estaba siguiendo 
+git, aun quedan en una erapa de stoge pero sale que ha 
+sido modificado, si se quiere que git siga los archivo que 
+han sido modificados se deben agreagar de nuevo con git add
+
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   archivo1.txt
+        new file:   archivo2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   archivo2.txt
+
+
+//
+ git commit -m "hola" //el nombre debe ser algo con sentido
+
+git commit  //esto abrira el editor de texto y en la primer linea podemos colocar el nombre, cerramos y ya se desbloquea la terminal
+
+git rm archivo1.txt //elimina el archivo y de una vez queda comprometido
+
+git restore --staged  archivo1.txt //descomprometer un archivo 
+
+git restore archivo1.txt // desaser cambio como un achivo elimindo
+
+git mv archivo1.txt archivo2.txt //cambia el nombre pero ya tiene el comando git antes
+lo que ahace es que de una vez lo sigue en staged
+
+
+//*******************************************************
+Ignorar archivos 
+se crea un archivo llamado .gitignore ya ahi se colocar
+el nombre del archivo o la carpeta a ignorar en el commit
+
+
+git diff --staged //muestra todos los cambios en la etapa de staged
+git log //ver historial
+git log --oneline
+
+//*******************************************************
+
+branch o rama
+
+$ git branch // para ver en que rama estamos trabjando
+
+* master //estamos trabajando en la rama master
+
+git checkout -b ramab  //crear y pasarnos a rama b
+
+
+git checkout main //pasarme a la rama b
+
+//para traer los cambio realiados por otra rama
+
+desde mi rama master
+
+git merge ramab
+
+
+// para subirlo agithub
+
+crear un reporsitorio
+
+git remote add origin https://github.com/PORRAS0412/miweb.git
+git push -u origin main
+
+
+echo "# miweb" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/PORRAS0412/miweb.git
+git push -u origin main
+
+
+git remote add origin https://github.com/PORRAS0412/miweb.git
+git branch -M main
+git push -u origin main
