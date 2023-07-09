@@ -4,4 +4,6 @@ const producto = {
     disponible : true,
 }
 
+// on objeto agrupa todo en una sola variale
+
 console.log(producto.nombre)
