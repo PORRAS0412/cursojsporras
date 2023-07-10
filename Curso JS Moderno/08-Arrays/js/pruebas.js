@@ -41,3 +41,5 @@ carrito.shift(); //eliminar del inicio
 
 
 carrito.splice(1,1);
+
+a
