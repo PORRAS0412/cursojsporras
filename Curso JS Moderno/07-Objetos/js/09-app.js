@@ -10,3 +10,11 @@ const medidas = {
     peso :'1kg',
     medida : '1m',
 }
+
+console.log(producto);
+console.log(medidas);
+
+const resultado = Object.assign(producto,medidas); //unir 2 objetos
+const resultado2 = {...producto, ...medidas};
+
+console.log(resultado)
