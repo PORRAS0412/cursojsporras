@@ -7,13 +7,11 @@ const carrito = [
     {nombre:'camara',precio :7541},
 ]
 
-
-for (let i = 0; i < carrito.length; i++){
-console.table(carrito[i].nombre)
-console.log(`${carrito[i].nombre} precio : ${carrito[i].precio}`)
-}
+const nuevoarrreglo = carrito.map(function(hola){
+    return `${producto.nombre} precio : ${producto.precio}`
+});
 
 
 carrito.forEach(function(hola){
-    console.log(`${producto.nombre} precio : ${producto.precio}`)
+    return `${producto.nombre} precio : ${producto.precio}`
 });
