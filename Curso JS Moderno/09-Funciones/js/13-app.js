@@ -26,3 +26,4 @@ reproductor.borrar();
 reproductor.crearplaylist('rock')
 reproductor.crearplaylist('salsa')
 reproductor.reproducirplaylist('heavy metal');
+//comentario
