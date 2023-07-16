@@ -1,13 +1,22 @@
-const usuario = false;
-const puedePagar = true;
+const autenticado = true;
+const puedepagar = true;
 
 
-if(usuario || puedePagar){
-    console.log('ya no puede pagar')
-}else if(!usuario) {
-    console.log('usuario')
-}else if(puedePagar) {
-    console.log('puede pagar')
+
+console.log(autenticado && puedepagar ? 'Esta autenticado' : 'No esta autenticado' );
+
+console.log(autenticado?  puedepagar ?'Esta autenticado y puede pagaar' : 'Esta autenticado pero no puede pagar  ' : 'No esta autenticado' )
+
+
+if(autenticado){
+         console.log('esta autenticado')
+    if (puedepagar) {
+        console.log( 'elsa autenticado y puede pagar')
+    }else{
+        
+        console.log( 'esta autenticado pero no puede pagar')
+    }
 }else{
-    console.log('No puedes comprar')
+    console.log( 'no esta autenticado')
 }
+    
