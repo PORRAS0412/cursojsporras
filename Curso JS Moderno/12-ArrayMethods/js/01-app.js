@@ -8,3 +8,26 @@ const carrito = [
     { nombre: 'Teclado', precio: 400 },
     { nombre: 'Celular', precio: 700 },
 ]
+meses.forEach((mes)=>{
+    if(mes === 'Enero'){
+        console.log('Si existe enero socail')
+
+    }
+}
+)
+const resultado = meses.includes('Diciembre')
+console.log(resultado)
+
+
+const resultado2 = carrito.some((producto)=>{
+    return producto.nombre === 'Celular'
+    }
+)
+
+
+console.log(resultado2)
+
+
+const pruebas = meses.some(valor => mes === 'Febrero')
+
+console.log(pruebas)
