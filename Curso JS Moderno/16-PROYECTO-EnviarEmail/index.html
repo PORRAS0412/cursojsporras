@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Envio de Emails</title>
+    <link rel="stylesheet" href="dist/spiner.css">
     <link rel="stylesheet" href="dist/app.css">
 </head>
 <body class="min-h-screen bg-slate-300">
@@ -18,9 +19,16 @@
                 </div>
 
                 <div class="flex flex-col space-y-2">
+                    <label for="cc" class="font-regular font-medium">CC:</label>
+                    <input id="cc" type="text" name="cc" placeholder="Email Destino Cc " class="border border-gray-300 px-3 py-2 rounded-lg" />
+                </div>
+
+                <div class="flex flex-col space-y-2">
                     <label for="asunto" class="font-regular font-medium">Asunto:</label>
                     <input id="asunto" type="text" name="asunto" placeholder="Asunto Email" class="border border-gray-300 px-3 py-2 rounded-lg" />
                 </div>
+
+                
 
                 <div class="flex flex-col space-y-2">
                     <label for="mensaje" class="font-regular font-medium">Mensaje:</label>
@@ -50,6 +58,9 @@
                     </button>
                 </div>           
             </form>
+            <div id="spiner" class="hidden  justify-center mt-10">
+                <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+            </div>
         </div>
     </div>
 

@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     iputAsunto.addEventListener('blur',validar)
     inputMensaje.addEventListener('blur',validar)
     formulario.addEventListener('submit',enviaremail)
-    cc.addEventListener('blur',validar);
+    inputCc.addEventListener('blur',validar);
     
     reset.addEventListener('click',(e)=>{
         e.preventDefault();
@@ -64,7 +64,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             comprobaremail();
             return;
         }
-        if(e.target.id === 'email' && valdiarEmail(e.target.value)){
+        if(e.target.id === 'email' && !valdiarEmail(e.target.value)){
             mostrarAlerta('El correo no es valido', e.target.parentElement)
             email[e.target.name] = '';
             comprobaremail();
